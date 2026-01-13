@@ -1,17 +1,14 @@
 import express from 'express';
-import { landingInfo, contactInfo } from './controllers/info.controller.js';
-//import * as ctl from './controllers/info.controller.js';
-
-//import dotenv from 'dotenv';
-
-//read in env values before server creation
-//dotenv.config();
-//console.log(process.env);
+import infoRouter from './routers/info.routes.js';
+import projectRouter from './routers/projects.routes.js';
 
 const app = express();
 
-app.get("/", landingInfo);
-app.get("/contact", contactInfo);
+//use middleware - which responds, rejects, passes along, or otherwise changes requests
+
+//mount the router
+app.use("/api/v1/info", infoRouter);
+app.use("/api/v1/projects", projectRouter);
 
 const { PORT, NODE_ENV } = process.env;
 app.listen(PORT, () => {
