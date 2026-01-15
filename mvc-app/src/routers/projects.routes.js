@@ -4,7 +4,13 @@ import { getAllProjects, getSingleProject, getTechRelated } from './../controlle
 const router = Router();
 
 router.get("/all", getAllProjects);
-router.get("/single", getSingleProject);
-router.get("/single/tech", getTechRelated);
+
+//these use query strings
+//router.get("/single", getSingleProject);
+//router.get("/single/tech", getTechRelated);
+
+//these use path parameters
+router.get("/single/:title", getSingleProject);
+router.get("/single/tech/:tech", getTechRelated);
 
 export default router;

@@ -73,7 +73,8 @@ export const getAllProjects = (req, res) => {
 }
 
 export const getSingleProject = (req, res) => {
-    const { title, id } = req.query;
+    //const { title } = req.query;
+    const { title } = req.params;
 
     const project = projects.find(el => {
         return el.title === title;
@@ -92,7 +93,8 @@ export const getSingleProject = (req, res) => {
 }
 
 export const getTechRelated = (req, res) => {
-    const { tech } = req.query;
+    //const { tech } = req.query;
+    const { tech } = req.params;
 
     const projectsFound = projects.filter(el => {
         return el.tech.includes(tech);
