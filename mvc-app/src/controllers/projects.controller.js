@@ -73,5 +73,13 @@ export const getAllProjects = (req, res) => {
 }
 
 export const getSingleProject = (req, res) => {
+    // const title = req.query.title;
+    // const id = req.query.id;
 
+    const { title, id } = req.query;
+
+    console.log(req.query);
+    console.log(title, id);
+
+    return res.status(200).send("Hello");
 }
