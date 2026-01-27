@@ -1,5 +1,5 @@
 import express from 'express';
-import defaultRouter from './routers/default.routes.js';
+import router from './routers/games.routes.js';
 
 //configure Express.js app
 const app = express();
@@ -15,7 +15,7 @@ app.use(express.static('public'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-//routers
-app.use("/", defaultRouter);
+//routers (shared path of /api/v1/games)
+app.use("/api/v1/games", router);
 
 export default app;
