@@ -1,8 +1,12 @@
 import express from 'express';
 import router from './routers/games.routes.js';
+import cors from 'cors';
 
 //configure Express.js app
 const app = express();
+
+//enable cors so we can make requests from other origins
+app.use(cors());
 
 //view engine
 app.set("view engine", "ejs");
