@@ -12,7 +12,53 @@
     <div class="hero-content">
         <h1>Static HTML Page</h1>
         <p>Served directly from the /public directory</p>
-        <p id="output"></p>
+        
+        <form id="gameForm">
+            <fieldset>
+                <legend>Add / Edit Game</legend>
+
+                <!-- ID -->
+                <div class="form-group">
+                    <label for="id">ID</label>
+                    <input type="number" id="id" name="id" required min="1">
+                </div>
+
+                <!-- Title -->
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" name="title" required maxlength="150">
+                </div>
+
+                <!-- Franchise -->
+                <div class="form-group">
+                    <label for="franchise">Franchise</label>
+                    <input type="text" id="franchise" name="franchise" maxlength="150">
+                </div>
+
+                <!-- Genre (Simple String) -->
+                <div class="form-group">
+                    <label for="genre">Genre</label>
+                    <input type="text" id="genre" name="genre" placeholder="e.g. Action, Adventure" required>
+                </div>
+
+                <button type="submit">Save Game</button>
+            </fieldset>
+        </form>
+
+        <h2>Records</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Franchise</th>
+                    <th>Genre</th>
+                </tr>
+            </thead>
+            <tbody id="games-list">
+
+            </tbody>
+        </table>
     </div>
 </body>
 </html>
