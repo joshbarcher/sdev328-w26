@@ -49,6 +49,24 @@ table {
     }
 }
 
+form {
+    .form-group {
+        padding: 6px;
+    }
+
+    label {
+        display: block;
+        text-transform: uppercase;
+    }
+
+    input, button {
+        border: 1px solid white;
+        border-radius: 4px;
+        padding: 4px;
+        margin: 4px 0;
+    }
+}
+
 /* ===== Hero ===== */
 
 .hero {
