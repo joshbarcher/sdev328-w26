@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SSR State Demos</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body class="<%= bodyClass %>">
+    <header class="bar">
+        <div class="brand">SSR State Demos</div>
+        <nav class="nav">
+            <a href="/cookies">Cookies</a>
+            <a href="/profile">Profile Session</a>
+            <a href="/signup/step/1">Multi-Form Session</a>
+            <a href="/status">Status</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>Home</h1>
+        <p class="muted">Use the nav links to run each example.</p>
+
+        <div class="row">
+            <div class="label">theme cookie:</div>
+            <div><strong><%= theme %></strong></div>
+        </div>
+
+        <div class="row">
+            <div class="label">themeClicks cookie:</div>
+            <div><strong><%= themeClicks %></strong></div>
+        </div>
+    </main>
+</body>
+</html>
