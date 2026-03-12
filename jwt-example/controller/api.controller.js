@@ -22,3 +22,5 @@ export const login = (req, res) => {
     const token = jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: "30m" });
     res.status(200).json({ token });
 }
+
+export const getHotels = (req, res) => res.status(200).json(hotels);
